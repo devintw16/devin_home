@@ -14,7 +14,7 @@ func contact(w http.ResponseWriter, r *http.Request){
 }
 
 func main() {
-        http.Handle("/", http.FileServer(http.Dir("../dist/")))
+        http.Handle("/", http.FileServer(http.Dir("../bootstrap_template/dist/")))
         http.HandleFunc("/contact", contact )
         http.ListenAndServe(":8000", nil)
 	
